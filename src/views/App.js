@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import Mycomponent from './Example/Mycomponent.js';
+// import ParentComponent from './Example/Nesting_Components.js';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        {/* <ParentComponent/> */}
         <Mycomponent/>
       </header>
     </div>

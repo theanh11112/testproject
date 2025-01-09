@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ParentComponent from './Nesting_Class_component.js';
 
 class Mycomponent extends React.Component {
 
@@ -13,6 +13,11 @@ class Mycomponent extends React.Component {
       first_name: "",
       last_name: "",
     },
+    array : [
+      { id: '111', title: 'developer', salary:'500$'},
+      { id: '222', title: 'tester', salary:'400$'},
+      { id: '333', title: 'managers', salary:'1000$'}
+    ]
   };
 
   handleOnChange = (event) => {
@@ -69,6 +74,10 @@ class Mycomponent extends React.Component {
         <input type="email" id="email" name="email" value={this.state.first_name} onChange={(event)=> this.handleOnChange_fistname(event)} />
         <button type="button" onClick={(event)=> this.cancel_reload(event)}>Submit</button>
       </form>
+       </div>
+
+       <div className='Third'>
+        <ParentComponent array={this.state.array}/>
        </div>
        </>
       )
