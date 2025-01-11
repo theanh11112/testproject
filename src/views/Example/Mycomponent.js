@@ -1,7 +1,7 @@
 import React from 'react';
-// import ParentComponent from './Nesting_Class_component.js';
+ import ParentComponent from './Nesting_Class_component.js';
 import AddComponent  from './AddComponent.js';
-import ParentComponent from './Nesting_Components.js';
+// import ParentComponent from './Nesting_Components.js';
 class Mycomponent extends React.Component {
 
    state = {
@@ -28,19 +28,26 @@ class Mycomponent extends React.Component {
   addNewJob = (job) => {
     this.setState(prevState => ({
       array: [...prevState.array, job]
-  }));
-  
+    }));
+  }
+
+  deleteJob = (job) => {
+    let curentJobs = this.state.array;
+    curentJobs = curentJobs.filter(item => item.id !== job.id)
+    this.setState({
+      array : curentJobs
+    })
   }
 
   
     render() {
       return (
        <>
-       {/* <AddComponent addNewJob={this.addNewJob}/>
+       <AddComponent addNewJob={this.addNewJob}/>
        <div className='Third'>
-        <ParentComponent array={this.state.array}/>
-       </div> */}
-       <ParentComponent/>
+        <ParentComponent array={this.state.array} deleteJob={this.deleteJob}/>
+       </div>
+       {/* <ParentComponent/> */}
        </>
       )
     }

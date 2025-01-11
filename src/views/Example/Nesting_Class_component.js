@@ -17,7 +17,11 @@ class ParentComponent extends Component {
         this.setState ({
             showJobs : !this.state.showJobs
         })
-    } 
+    }
+
+    handleOnclickDelete = (job) => {
+         this.props.deleteJob(job)
+    }
     render (){
         let { array } = this.props;
         let { showJobs } = this.state;
@@ -34,7 +38,7 @@ class ParentComponent extends Component {
                         array.map((item,index)=>{
                             return (
                                 <div key={item.id}>
-                                {item.title} - {item.salary} 
+                                {item.title} - {item.salary} <></> <></> <span onClick={() => this.handleOnclickDelete(item)}>x</span>
                                 </div>
                             )
                         })

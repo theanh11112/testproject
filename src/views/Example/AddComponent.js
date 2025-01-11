@@ -34,16 +34,15 @@ class AddComponent extends React.Component {
     
     cancel_reload = (event) => {
         event.preventDefault()
-        // this.props.addNewJob({
-        //     id : Math.floor(Math.random() * 1001),
-        //     title : this.state.nameDetails.title,
-        //     salary : this.state.nameDetails.salary
-        // })
-        this.props.Thuyan()
+        this.props.addNewJob({
+            id : Math.floor(Math.random() * 1001),
+            title : this.state.nameDetails.title,
+            salary : this.state.nameDetails.salary
+        })
+        // this.props.Thuyan()  /// truy tu 1 function tu function component sang  class component
     }
     
    render (){
-    console.log(123)
     return (
         <>
        <div className='fourth'>
