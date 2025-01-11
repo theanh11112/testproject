@@ -22,11 +22,14 @@ class ParentComponent extends Component {
         let { array } = this.props;
         let { showJobs } = this.state;
         let  check  = showJobs === true ? 'showJobs === true' : 'showJobs === false'  ;
-        console.log(check)
         return (
             <>
                 {showJobs === false ?
                     <>
+                    <button onClick={() =>{this.handleShowHide()}}>Show</button>
+                   </>
+                :
+                    <div>
                     <div className="Job_List">{
                         array.map((item,index)=>{
                             return (
@@ -37,11 +40,6 @@ class ParentComponent extends Component {
                         })
                     }</div>
                     <div> <button onClick={() =>{this.handleShowHide()}}>Hide</button></div>
-                   </>
-                        
-                :
-                    <div>
-                    <button onClick={() =>{this.handleShowHide()}}>Show</button>
                    </div>
                 }
             </>
