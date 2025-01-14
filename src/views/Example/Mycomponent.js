@@ -38,6 +38,14 @@ class Mycomponent extends React.Component {
       array : curentJobs
     })
   }
+  
+  componentDidMount(){
+    console.log("thuy an ")
+  }
+
+  componentDidUpdate(prevProps,prevState) {
+    console.log("prevState",prevState,"current state", this.state)
+  }
 
   
     render() {
