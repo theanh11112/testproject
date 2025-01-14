@@ -52,7 +52,7 @@ class ListTodo extends React.Component{
     handleEdit = (job) => {
         this.setState ((prevState) => {
             const updatedListTodo = prevState.listTodo.map((item) => {
-              return  item.id === job.id ? {...item, save : true } : item 
+              return  item.id === job.id ? {...item, save : true } : {...item, save : false }
         })
             return {listTodo : updatedListTodo,
                      InputUpdate :  job.title}

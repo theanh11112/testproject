@@ -4,13 +4,13 @@ import Mycomponent from './Example/Mycomponent.js';
 import ListTodo from './Todo/Todolist.js';
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
-
+import Navigation from './Navigation /Navigation.js';
 // import ParentComponent from './Example/Nesting_Components.js';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Navigation/>
         <img src={logo} className="App-logo" alt="logo" />
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -26,7 +26,8 @@ function App() {
         <p>Todo -APP </p>
         {/* <ParentComponent/> */}
         {/* <Mycomponent/> */}
-        <ListTodo/>
+        {/* <ListTodo/> */}
+
 
       </header>
       <ToastContainer
