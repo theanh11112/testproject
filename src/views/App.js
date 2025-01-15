@@ -5,6 +5,7 @@ import ListTodo from './Todo/Todolist.js';
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Navigation from './Navigation /Navigation.js';
+import Redirect from './Navigation /Redirect.js';
 // import ParentComponent from './Example/Nesting_Components.js';
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         {/* <ParentComponent/> */}
         {/* <Mycomponent/> */}
         {/* <ListTodo/> */}
-
+       {/* <Redirect/> */}
 
       </header>
       <ToastContainer
