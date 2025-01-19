@@ -4,6 +4,7 @@ import './Navigation.scss';
 import ListTodo from "../Todo/Todolist";
 import { useNavigate } from 'react-router-dom';
 import ListUser from "../Users/ListUser";
+import LazyLoading from "../Lazy Loading/lazyLoading";
 
 
 const Home = () => <h2>Home Page</h2>;
@@ -49,6 +50,13 @@ const Navigation = () => {
             >
               ListUser
             </NavLink>
+
+            <NavLink 
+              to="/NewFeed" 
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              New Feed
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -57,6 +65,7 @@ const Navigation = () => {
         <Route path="/" element={<Home />} />
         <Route path="/ListTodo" element={<ListTodo />} />
         <Route path="/User" element={<ListUser />} />
+        <Route path="/NewFeed" element={<LazyLoading />} />
       </Routes>
     </>
   );
