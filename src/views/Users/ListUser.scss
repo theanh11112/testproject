@@ -1,0 +1,16 @@
+
+.list-user-container{
+    .list-user-content{
+        .child{
+            width: 300px;
+            margin: 0 auto; 
+            height: 40px;
+            border: 1px solid gray;
+            display: flex;
+            justify-content: center;  // Căn giữa theo chiều ngang
+            align-items: center;      // Căn giữa theo chiều dọc
+            text-align: center;       // Căn giữa text nội dung theo chiều ngang
+        }
+    }
+}
+

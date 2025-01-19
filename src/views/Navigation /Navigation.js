@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 import './Navigation.scss';
 import ListTodo from "../Todo/Todolist";
 import { useNavigate } from 'react-router-dom';
+import ListUser from "../Users/ListUser";
+
+
 const Home = () => <h2>Home Page</h2>;
 const About = () => <h2>About Page</h2>;
 const Contact = () => <h2>Contact Page</h2>;
@@ -38,21 +41,22 @@ const Navigation = () => {
               ListTodo
             </NavLink>
           </li>
+
           <li>
             <NavLink 
-              to="/contact" 
+              to="/User" 
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Contact
+              ListUser
             </NavLink>
           </li>
         </ul>
       </nav>
-      <button onClick={handleRedirect}>Call Back</button>
+      {/* <button onClick={handleRedirect}>Call Back</button> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ListTodo" element={<ListTodo />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/User" element={<ListUser />} />
       </Routes>
     </>
   );

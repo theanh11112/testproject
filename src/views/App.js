@@ -11,8 +11,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Navigation/>
+      <p style={{ marginTop: '-100px' }}>Todo - APP</p>
         <img src={logo} className="App-logo" alt="logo" />
+        <Navigation/>
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -24,7 +25,6 @@ function App() {
         >
           Learn React
         </a> */}
-        <p>Todo -APP </p>
         {/* <ParentComponent/> */}
         {/* <Mycomponent/> */}
         {/* <ListTodo/> */}
