@@ -34,7 +34,7 @@ function LazyLoading() {
     <div onScroll={handleScroll} style={{ height: '400px', overflowY: 'auto' }}>
       <h1>Lazy Loading Data</h1>
       {data.map((item,index) => (
-        <div key={index}>
+        <div key={index} style={{ height:'auto', width:'600px' }}>
           <h2>{item.title}</h2>
           <p>{item.body}</p>
         </div>

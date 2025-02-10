@@ -4,9 +4,9 @@ import './Navigation.scss';
 import ListTodo from "../Todo/Todolist";
 import { useNavigate } from 'react-router-dom';
 import ListUser from "../Users/ListUser";
-import LazyLoading from "../Lazy Loading/lazyLoading";
-
-
+import LazyLoading from "../Lazy Loading and Pagination/lazyLoading";
+import Pagination from "../Lazy Loading and Pagination/Pagination";
+import UserProfile from "../routerparameter/routerParameter";
 const Home = () => <h2>Home Page</h2>;
 const About = () => <h2>About Page</h2>;
 const Contact = () => <h2>Contact Page</h2>;
@@ -57,6 +57,13 @@ const Navigation = () => {
             >
               New Feed
             </NavLink>
+
+            <NavLink 
+              to="/Pagination" 
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Pagination
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -66,6 +73,8 @@ const Navigation = () => {
         <Route path="/ListTodo" element={<ListTodo />} />
         <Route path="/User" element={<ListUser />} />
         <Route path="/NewFeed" element={<LazyLoading />} />
+        <Route path="/Pagination" element={<Pagination />} />
+        <Route path="/user/:username" element={<UserProfile />} />
       </Routes>
     </>
   );
