@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Navigation from './Navigation /Navigation.js';
 import Redirect from './Navigation /Redirect.js';
 import App1 from './routerparameter/routerParameter.js';
+import CounterAuth from './redux/counterAuth.js';
 // import ParentComponent from './Example/Nesting_Components.js';
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <header className="App-header">
       <p style={{ marginTop: '-100px' }}>Todo - APP</p>
         <img src={logo} className="App-logo" alt="logo" />
-        <Navigation/>
+        <CounterAuth/>
+        {/* <Navigation/> */}
         {/* <App1/> */}
         {/* <p>
           Edit <code>src/App.js</code> and save to reload.
